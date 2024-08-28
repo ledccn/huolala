@@ -33,6 +33,7 @@ abstract class BaseAbstract
      */
     const API_SANDBOX_SERVER = 'https://openapi-pre.huolala.cn/v1';
     /**
+     * 已实现AccessToken接口的对象
      * @var AccessToken|null
      */
     protected ?AccessToken $accessToken = null;
@@ -80,7 +81,7 @@ abstract class BaseAbstract
      * 获取货拉拉开发平台授权域名
      * @return string
      */
-    final public function getOauthServer(): string
+    final private function getOauthServer(): string
     {
         $sandbox = $this->getConfig()->isSandbox() ? 'true' : 'false';
         return self::OAUTH_SERVER . $sandbox;
@@ -191,7 +192,7 @@ abstract class BaseAbstract
      * @param string $prefix
      * @return string
      */
-    final public function createUuid(string $prefix = ""): string
+    final protected function createUuid(string $prefix = ""): string
     {
         $chars = md5(uniqid(mt_rand(), true));
         $uuid = substr($chars, 0, 8) . '-'
@@ -208,7 +209,7 @@ abstract class BaseAbstract
      * @param string $secret
      * @return string
      */
-    final public function createSignature(array $params, string $secret): string
+    final protected function createSignature(array $params, string $secret): string
     {
         ksort($params);
         $str = '';

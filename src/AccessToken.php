@@ -15,7 +15,7 @@ interface AccessToken
 
     /**
      * 获取
-     * @docs 1.从缓存取access_token；2.过期是刷新access_token；3.凭code换取token
+     * @docs 1.从缓存取access_token；2.过期时刷新access_token；3.凭code换取token
      * @return string
      */
     public function get(): string;
