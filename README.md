@@ -30,9 +30,9 @@ $config = new Config($config)
 
 配置管理类：`Ledc\Huolala\Config`
 
-货拉拉基础抽象类：`Ledc\Huolala\BaseAbstract`
+货拉拉APP业务类：`Ledc\Huolala\AppApi`
 
-你可以继承`Ledc\Huolala\Config`或`Ledc\Huolala\BaseAbstract`，扩展您需要的功能。
+你可以继承`Ledc\Huolala\Config`或`Ledc\Huolala\AppApi`，扩展您需要的功能。
 
 在创建实例后，所有的方法都可以有IDE自动补全;
 

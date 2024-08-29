@@ -152,7 +152,7 @@ abstract class BaseAbstract
      * @param bool $needToken 接口是否需要access_token
      * @param array $apiData 业务数据参数
      * @return mixed
-     * @throws Exception|Throwable
+     * @throws Throwable
      */
     final public function callApi(string $apiMethod, bool $needToken = true, array $apiData = [])
     {
